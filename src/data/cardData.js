@@ -36,6 +36,8 @@ export const cardData = {
   theme: 'dark', // 'dark' | 'light'
   accentColor: '#3b5bdb',
 
-  // Card URL (update once deployed)
-  cardUrl: typeof window !== 'undefined' ? window.location.href : 'https://card.nexusinnovations.com',
+  // Card URL — auto-detected from browser, falls back to GitHub Pages URL
+  cardUrl: typeof window !== 'undefined'
+    ? window.location.origin + window.location.pathname
+    : 'https://ajay-sharma-bhopal.github.io/digitalbusinesscard/',
 }
